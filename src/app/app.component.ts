@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  resources: Array<string> = [ 'Films', 'People', 'Starships', 'Vehicles', 'Species', 'Planets' ];
 }

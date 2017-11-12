@@ -1,0 +1,35 @@
+<mat-table #table [dataSource]="dataSource">
+    <!-- Episode ID Column -->
+    <ng-container matColumnDef="episode_id">
+      <mat-header-cell *matHeaderCellDef> Episode </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.episode_id }} </mat-cell>
+    </ng-container>
+
+    <!-- Title Column -->
+    <ng-container matColumnDef="title">
+      <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.title }} </mat-cell>
+    </ng-container>
+  
+    <!-- Director Column -->
+    <ng-container matColumnDef="director">
+      <mat-header-cell *matHeaderCellDef> Director </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.director }} </mat-cell>
+    </ng-container>
+    
+    <!-- Producer Column -->
+    <ng-container matColumnDef="producer">
+      <mat-header-cell *matHeaderCellDef> Producer </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.producer }} </mat-cell>
+    </ng-container>
+    
+    <!-- Release Date Column -->
+    <ng-container matColumnDef="release_date">
+      <mat-header-cell *matHeaderCellDef> Release Date </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.release_date }} </mat-cell>
+    </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  

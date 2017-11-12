@@ -1,0 +1,58 @@
+<mat-table #table [dataSource]="dataSource">
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.name }} </mat-cell>
+    </ng-container>
+
+    <!-- Classification Column -->
+    <ng-container matColumnDef="classification">
+      <mat-header-cell *matHeaderCellDef> Classification </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.classification }} </mat-cell>
+    </ng-container>
+
+    <!-- Designation Column -->
+    <ng-container matColumnDef="designation">
+      <mat-header-cell *matHeaderCellDef> Designation </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.designation }} </mat-cell>
+    </ng-container>
+
+    <!-- Average Height Column -->
+    <ng-container matColumnDef="average_height">
+      <mat-header-cell *matHeaderCellDef> Average Height </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.average_height }} </mat-cell>
+    </ng-container>
+
+    <!-- Skin Colours Column -->
+    <ng-container matColumnDef="skin_colors">
+      <mat-header-cell *matHeaderCellDef> Skin Colours </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.skin_colors }} </mat-cell>
+    </ng-container>
+
+    <!-- Hair Colours Column -->
+    <ng-container matColumnDef="hair_colors">
+      <mat-header-cell *matHeaderCellDef> Hair Colours </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.hair_colors }} </mat-cell>
+    </ng-container>
+
+    <!-- Eye Colours Column -->
+    <ng-container matColumnDef="eye_colors">
+      <mat-header-cell *matHeaderCellDef> Eye Colours </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.eye_colors }} </mat-cell>
+    </ng-container>
+
+    <!-- Average Lifespan Column -->
+    <ng-container matColumnDef="average_lifespan">
+      <mat-header-cell *matHeaderCellDef> Average Lifespan </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.average_lifespan }} </mat-cell>
+    </ng-container>
+
+    <!-- Language Column -->
+    <ng-container matColumnDef="language">
+      <mat-header-cell *matHeaderCellDef> Language </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.language }} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>

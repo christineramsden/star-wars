@@ -1,0 +1,64 @@
+<mat-table #table [dataSource]="dataSource">
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.name }} </mat-cell>
+    </ng-container>
+
+    <!-- Model Column -->
+    <ng-container matColumnDef="model">
+      <mat-header-cell *matHeaderCellDef> Model </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.model }} </mat-cell>
+    </ng-container>
+
+    <!-- Manufacturer Column -->
+    <ng-container matColumnDef="manufacturer">
+      <mat-header-cell *matHeaderCellDef> Manufacturer </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.manufacturer }} </mat-cell>
+    </ng-container>
+
+    <!-- Cost in Credits Column -->
+    <ng-container matColumnDef="cost_in_credits">
+      <mat-header-cell *matHeaderCellDef> Cost in Credits </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.cost_in_credits }} </mat-cell>
+    </ng-container>
+
+    <!-- Length Column -->
+    <ng-container matColumnDef="length">
+      <mat-header-cell *matHeaderCellDef> Length </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.length }} </mat-cell>
+    </ng-container>
+
+    <!-- Crew Column -->
+    <ng-container matColumnDef="crew">
+      <mat-header-cell *matHeaderCellDef> Crew </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.crew }} </mat-cell>
+    </ng-container>
+
+    <!-- Passengers Column -->
+    <ng-container matColumnDef="passengers">
+      <mat-header-cell *matHeaderCellDef> Passengers </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.passengers }} </mat-cell>
+    </ng-container>
+
+    <!-- Cargo Capacity Column -->
+    <ng-container matColumnDef="cargo_capacity">
+      <mat-header-cell *matHeaderCellDef> Cargo Capacity </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.cargo_capacity }} </mat-cell>
+    </ng-container>
+
+    <!-- Consumables Column -->
+    <ng-container matColumnDef="consumables">
+      <mat-header-cell *matHeaderCellDef> Consumables </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.consumables }} </mat-cell>
+    </ng-container>
+
+    <!-- Vehicle Class Column -->
+    <ng-container matColumnDef="vehicle_class">
+      <mat-header-cell *matHeaderCellDef> Vehicle Class </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.vehicle_class }} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
